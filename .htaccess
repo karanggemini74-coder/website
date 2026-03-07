@@ -1,0 +1,36 @@
+<IfModule mod_headers.c>
+    # 1. Content Security Policy (Isme wahi domains rakhein jo aap use kar rahe hain)
+    # Agar aap Google Fonts ya Tailwind CDN use nahi kar rahe, to un URLs ko hata dein.
+    # Added Google Drive domains to img-src
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.transparenttextures.com https://drive.google.com https://*.googleusercontent.com; connect-src 'self' https://esm.sh;"
+
+    # 2. Clickjacking Protection
+    Header set X-Frame-Options "DENY"
+
+    # 3. MIME Sniffing Protection
+    Header set X-Content-Type-Options "nosniff"
+
+    # 4. HSTS (Sirf tab use karein agar SSL/HTTPS already active ho)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # 5. Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # 6. Permissions Policy (Privacy)
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # 1. Force HTTPS (HTTP -> HTTPS)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. React/Vue/Angular SPA Routing (Agar Single Page App hai to ye zaroori hai)
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>

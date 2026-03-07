@@ -1,0 +1,5 @@
+Contact: mailto:ra@karanvijayvargiya.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.karanvijayvargiya.com/.well-known/security.txt
+Policy: https://www.karanvijayvargiya.com/compliance/privacy-policy
