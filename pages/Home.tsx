@@ -73,7 +73,7 @@ const Home: React.FC = () => {
 
         <motion.div 
           style={{ opacity: opacityText, scale: scaleText, y: useTransform(scrollYProgress, [0, 1], ["0%", "30%"]) }}
-          className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20"
+          className="relative z-20 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-20"
         >
           <div className="max-w-4xl">
             <motion.div 
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Feature Strip - Overlapping */}
-      <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 mb-20">
+      <div className="relative z-30 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 -mt-24 mb-20">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -190,7 +190,7 @@ const Home: React.FC = () => {
 
       {/* Highlights/Cards */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
@@ -237,7 +237,7 @@ const Home: React.FC = () => {
 
       {/* Core Pillars */}
       <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -301,7 +301,7 @@ const Home: React.FC = () => {
 
       {/* Founder Teaser */}
       <section className="py-24 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <motion.div 
               initial={{ opacity: 0, x: -50, rotate: -5 }}
@@ -367,7 +367,7 @@ const Home: React.FC = () => {
       {/* Contact Section */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
              <motion.div 
                initial={{ opacity: 0, y: 50 }}

@@ -52,7 +52,7 @@ const Services: React.FC = () => {
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div 
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Cards Section - Floating Over Hero */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 mb-24">
+        <div className="relative z-20 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 -mt-20 mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 
                 {/* Card 1: Equity Growth */}
@@ -211,7 +211,7 @@ const Services: React.FC = () => {
 
         {/* How It Works Section - Clean & Light */}
         <div className="py-24 bg-white relative">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <motion.span 
                       initial={{ opacity: 0, scale: 0.8 }}

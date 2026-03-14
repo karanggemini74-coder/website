@@ -19,7 +19,7 @@ const Founder: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-400/30 bg-brand-500/10 text-brand-300 text-xs font-bold uppercase tracking-widest mb-8">
             <Award size={14} /> 
             <span>SEBI Registered Authority</span>
@@ -34,7 +34,7 @@ const Founder: React.FC = () => {
       </div>
 
       {/* Main Profile Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32 relative z-20 pb-20">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 -mt-32 relative z-20 pb-20">
         <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-slate-100 flex flex-col lg:flex-row">
             
             {/* Left: Image & Stats */}
@@ -151,7 +151,7 @@ const Founder: React.FC = () => {
 
       {/* Expertise & Values Grid */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Expertise */}
