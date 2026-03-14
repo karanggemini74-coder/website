@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, BookOpen, Shield, TrendingUp, Lock, Star } from 'lucide-react';
+import { motion } from 'motion/react';
 import SEO from '../components/SEO';
 
 const Services: React.FC = () => {
@@ -21,7 +22,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans">
+    <div className="min-h-screen bg-slate-50 font-sans overflow-hidden">
         <SEO 
           title="Our Services" 
           description="Explore our research-driven investment strategies, including equity growth packs and beginner's kickstart batches for long-term wealth."
@@ -32,22 +33,51 @@ const Services: React.FC = () => {
         <div className="relative bg-slate-900 pb-32 pt-24 overflow-hidden">
             {/* Abstract Background */}
             <div className="absolute inset-0">
-                <div className="absolute top-0 right-0 w-[800px] h-[600px] bg-brand-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-600/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+                <motion.div 
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    opacity: [0.3, 0.5, 0.3]
+                  }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-0 right-0 w-[800px] h-[600px] bg-brand-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+                />
+                <motion.div 
+                  animate={{ 
+                    scale: [1, 1.5, 1],
+                    opacity: [0.2, 0.4, 0.2]
+                  }}
+                  transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-600/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"
+                />
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-300 text-sm font-semibold mb-8 backdrop-blur-sm">
+                <motion.div 
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-300 text-sm font-semibold mb-8 backdrop-blur-sm"
+                >
                     <Star size={14} className="fill-brand-300" /> Premium Advisory
-                </div>
-                <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+                </motion.div>
+                <motion.h1 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight"
+                >
                     Research-Driven <br className="hidden md:block" />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-blue-200 to-white">Investment Strategies</span>
-                </h1>
-                <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                </motion.h1>
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed"
+                >
                     Designed for clarity, growth, and long-term wealth creation. Choose the path that fits your financial goals.
-                </p>
+                </motion.p>
             </div>
         </div>
 
@@ -56,7 +86,13 @@ const Services: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 
                 {/* Card 1: Equity Growth */}
-                <div className="group relative flex flex-col h-full">
+                <motion.div 
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7 }}
+                  className="group relative flex flex-col h-full"
+                >
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-[2rem] opacity-75 blur group-hover:opacity-100 transition duration-500"></div>
                     <div className="relative flex flex-col h-full bg-slate-900 rounded-[1.9rem] border border-slate-700/50 p-8 md:p-10 overflow-hidden">
                         
@@ -78,12 +114,19 @@ const Services: React.FC = () => {
 
                             <div className="space-y-5 mb-10 flex-grow">
                                 {equityFeatures.map((item, i) => (
-                                    <div key={i} className="flex gap-4">
+                                    <motion.div 
+                                      initial={{ opacity: 0, x: -20 }}
+                                      whileInView={{ opacity: 1, x: 0 }}
+                                      viewport={{ once: true }}
+                                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                                      key={i} 
+                                      className="flex gap-4"
+                                    >
                                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-0.5">
                                             <Check size={14} className="text-blue-400" />
                                         </div>
                                         <p className="text-slate-300 text-sm leading-relaxed">{item}</p>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
 
@@ -100,10 +143,16 @@ const Services: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Card 2: Beginner's Kickstart */}
-                <div className="group relative flex flex-col h-full">
+                <motion.div 
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  className="group relative flex flex-col h-full"
+                >
                     {/* Different gradient for distinction */}
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-[2rem] opacity-50 blur group-hover:opacity-100 transition duration-500"></div>
                     <div className="relative flex flex-col h-full bg-slate-900 rounded-[1.9rem] border border-slate-700/50 p-8 md:p-10 overflow-hidden">
@@ -126,12 +175,19 @@ const Services: React.FC = () => {
 
                             <div className="space-y-5 mb-10 flex-grow">
                                 {educationFeatures.map((item, i) => (
-                                    <div key={i} className="flex gap-4">
+                                    <motion.div 
+                                      initial={{ opacity: 0, x: -20 }}
+                                      whileInView={{ opacity: 1, x: 0 }}
+                                      viewport={{ once: true }}
+                                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                                      key={i} 
+                                      className="flex gap-4"
+                                    >
                                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-teal-500/20 flex items-center justify-center mt-0.5">
                                             <Check size={14} className="text-teal-400" />
                                         </div>
                                         <p className="text-slate-300 text-sm leading-relaxed">{item}</p>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
 
@@ -148,7 +204,7 @@ const Services: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </div>
@@ -157,9 +213,33 @@ const Services: React.FC = () => {
         <div className="py-24 bg-white relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                    <span className="text-brand-600 font-bold uppercase tracking-widest text-sm mb-2 block">Process</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How It Works</h2>
-                    <p className="text-slate-500 text-lg">The Right Way to Invest (Compliance-First Process)</p>
+                    <motion.span 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5 }}
+                      className="text-brand-600 font-bold uppercase tracking-widest text-sm mb-2 block"
+                    >
+                      Process
+                    </motion.span>
+                    <motion.h2 
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.1 }}
+                      className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
+                    >
+                      How It Works
+                    </motion.h2>
+                    <motion.p 
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      className="text-slate-500 text-lg"
+                    >
+                      The Right Way to Invest (Compliance-First Process)
+                    </motion.p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
@@ -183,13 +263,20 @@ const Services: React.FC = () => {
                           desc: "Get actionable research reports and recommendations directly on your Dashboard/App. Execute trades via your own broker." 
                         }
                     ].map((step, idx) => (
-                        <div key={idx} className="relative flex flex-col items-center text-center">
+                        <motion.div 
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: "-50px" }}
+                          transition={{ duration: 0.6, delay: idx * 0.2 }}
+                          key={idx} 
+                          className="relative flex flex-col items-center text-center"
+                        >
                             <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl flex items-center justify-center mb-8 relative z-10 group hover:border-brand-100 transition-colors duration-300">
                                 <span className="text-3xl font-black text-slate-200 group-hover:text-brand-600 transition-colors duration-300">{step.num}</span>
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
                             <p className="text-slate-500 text-sm leading-relaxed max-w-xs">{step.desc}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
@@ -197,7 +284,13 @@ const Services: React.FC = () => {
 
         {/* Regulatory Banner - Subdued but Clear */}
         <div className="bg-slate-50 border-t border-slate-200 py-16">
-            <div className="max-w-5xl mx-auto px-4 text-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-5xl mx-auto px-4 text-center"
+            >
                 <div className="inline-flex items-center justify-center p-3 bg-white rounded-full shadow-sm mb-6">
                     <Shield className="text-slate-400 w-6 h-6" />
                 </div>
@@ -206,7 +299,7 @@ const Services: React.FC = () => {
                     Investments in securities market are subject to market risks. Read all the related documents carefully before investing. 
                     Registration granted by SEBI, membership of BASL (in case of IAs) and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
                 </p>
-            </div>
+            </motion.div>
         </div>
 
     </div>

@@ -12,12 +12,12 @@ const Disclaimer: React.FC = () => {
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">1. About Us</h2>
           <p>Karan Vijayvargiya (hereinafter referred to as "Research Analyst", "we", "our", "us") is registered with SEBI as a Research Analyst under the provisions of SEBI (Research Analysts) Regulations, 2014.</p>
-          <p className="mt-2 text-sm"><strong>SEBI Registration No.:</strong> INH00000XXXXX | <strong>Validity:</strong> Valid till XX-XX-XXXX | <strong>Type:</strong> Individual</p>
+          <p className="mt-2 text-sm"><strong>SEBI Registration No.:</strong> INH000025470 | <strong>Validity:</strong> Valid till XX-XX-XXXX | <strong>Type:</strong> Individual</p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">2. Current Scope of Services</h2>
-          <p>As of now, the scope of services provided by Karan Vijayvargiya, SEBI Reg. No.: INH00000XXXXX (Validity of Certificate not mentioned as per the requirement):</p>
+          <p>As of now, the scope of services provided by Karan Vijayvargiya, SEBI Reg. No.: INH000025470 (Validity of Certificate not mentioned as per the requirement):</p>
           <p className="mt-2">As of now, the scope of services we offer to both website visitors and office visit:</p>
           <ul className="list-disc pl-5 space-y-1 mt-2">
             <li>Conducting equity research and technical analysis</li>
@@ -69,7 +69,7 @@ const Disclaimer: React.FC = () => {
 
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">6. Research Analyst Disclosure</h2>
-          <p>I, Karan Vijayvargiya (SEBI Registered Research Analyst - Reg. No.: INH00000XXXXX), hereby disclose:</p>
+          <p>I, Karan Vijayvargiya (SEBI Registered Research Analyst - Reg. No.: INH000025470), hereby disclose:</p>
           <ul className="list-disc pl-5 space-y-1 mt-2">
             <li>I may or may not have positions in the stocks recommended in research reports. Any personal holdings will be disclosed in individual research reports.</li>
             <li>I do not receive any compensation from companies covered in research reports (other than subscription fees from clients).</li>
@@ -163,7 +163,7 @@ const Disclaimer: React.FC = () => {
           <p>If you have any questions or concerns regarding this disclaimer, please contact us:</p>
           <div className="bg-slate-50 p-4 rounded-lg mt-4 text-sm">
             <p className="font-bold">Karan Vijay Vargiya (SEBI Registered Research Analyst)</p>
-            <p><strong>SEBI Registration No.:</strong> INH00000XXXXX</p>
+            <p><strong>SEBI Registration No.:</strong> INH000025470</p>
             <p><strong>Email:</strong> <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600">ra@karanvijayvargiya.com</a></p>
             <p><strong>Phone:</strong> +91 89592 22227</p>
             <p><strong>Address:</strong> Office 101, 654 Shyam Aashrey, Scheme No 114, Part 2, Vijaynagar, Indore, Madhya Pradesh - 452010</p>

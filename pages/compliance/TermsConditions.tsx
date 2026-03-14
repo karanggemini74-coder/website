@@ -2,7 +2,7 @@ import React from 'react';
 import ComplianceLayout from '../../components/ComplianceLayout';
 
 const TermsConditions: React.FC = () => {
-  const sebiRegNo = import.meta.env.VITE_SEBI_REG_NO || 'INH00000XXXX';
+  const sebiRegNo = import.meta.env.VITE_SEBI_REG_NO || 'INH000025470';
 
   return (
     <ComplianceLayout title="Terms & Conditions">

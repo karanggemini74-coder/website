@@ -28,7 +28,7 @@ const Compliance: React.FC = () => {
         
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-8">
            <p className="text-sm text-blue-800">
-             <strong>Registration Status:</strong> We are a SEBI Registered Research Analyst (INH00000XXXX). Compliance is at the core of our operations. Below are the mandatory disclosures and documents for investor reference.
+             <strong>Registration Status:</strong> We are a SEBI Registered Research Analyst (INH000025470). Compliance is at the core of our operations. Below are the mandatory disclosures and documents for investor reference.
            </p>
         </div>
 

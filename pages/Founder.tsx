@@ -57,7 +57,7 @@ const Founder: React.FC = () => {
                     <h3 className="text-3xl font-bold mb-1">Karan Vijayvargiya</h3>
                     <p className="text-brand-300 font-medium text-sm mb-4 uppercase tracking-wider">SEBI Registered Research Analyst</p>
                     <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded border border-white/20 text-xs font-mono text-white/90">
-                      Reg No: INH00000XXXX
+                      Reg No: INH000025470
                     </div>
                 </div>
               </div>

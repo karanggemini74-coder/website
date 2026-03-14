@@ -5,7 +5,7 @@ const StandardDisclosures: React.FC = () => {
   return (
     <ComplianceLayout title="Disclosures As Per Securities and Exchange Board of India (Research Analysts) Regulations, 2014">
       <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-8 text-sm">
-        In accordance with the SEBI (Research Analysts) Regulations, 2014, the following disclosures are presented for <strong>Karan Vijayvargiya</strong>, SEBI Reg. No. INH00000XXXXX (Registration valid till XX-XX-XXXX).
+        In accordance with the SEBI (Research Analysts) Regulations, 2014, the following disclosures are presented for <strong>Karan Vijayvargiya</strong>, SEBI Reg. No. INH000025470 (Registration valid till XX-XX-XXXX).
       </div>
 
       <div className="space-y-8">
@@ -14,7 +14,7 @@ const StandardDisclosures: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-slate-50 p-4 rounded border border-slate-200">
              <div>
                <p><strong>Name of Research Analyst:</strong><br/>Karan Vijayvargiya</p>
-               <p className="mt-2"><strong>SEBI Registration Number:</strong><br/>INH00000XXXXX</p>
+               <p className="mt-2"><strong>SEBI Registration Number:</strong><br/>INH000025470</p>
                <p className="mt-2"><strong>Validity:</strong><br/>Valid till XX-XX-XXXX</p>
              </div>
              <div>
@@ -114,7 +114,7 @@ const StandardDisclosures: React.FC = () => {
           <h2 className="text-xl font-bold text-slate-900 mb-3">8. Entity & Contact Information</h2>
           <div className="bg-slate-50 p-4 rounded-lg mt-4 text-sm border border-slate-200">
             <p><strong>Brand Name:</strong> Karan Vijayvargiya (Individual Research Analyst)</p>
-            <p><strong>SEBI RA No.:</strong> INH00000XXXXX</p>
+            <p><strong>SEBI RA No.:</strong> INH000025470</p>
             <p><strong>Registered Office:</strong> Office 101, 654 Shyam Aashrey, Scheme No 114, Part 2, Vijaynagar, Indore, Madhya Pradesh - 452010</p>
             <p><strong>Compliance / Grievance Officer:</strong> Karan Vijayvargiya</p>
             <p><strong>Email:</strong> <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600 hover:underline">ra@karanvijayvargiya.com</a></p>

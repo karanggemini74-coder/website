@@ -138,7 +138,7 @@ const PrivacyPolicy: React.FC = () => {
           <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us:</p>
            <div className="bg-slate-50 p-4 rounded-lg mt-4 text-sm">
             <p className="font-bold">Karan Vijay Vargiya (SEBI Registered Research Analyst)</p>
-            <p><strong>SEBI Registration No.:</strong> INH00000XXXXX</p>
+            <p><strong>SEBI Registration No.:</strong> INH000025470</p>
             <p><strong>Email:</strong> <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600">ra@karanvijayvargiya.com</a></p>
             <p><strong>Phone:</strong> +91 89592 22227</p>
             <p><strong>Address:</strong> Office 101, 654 Shyam Aashrey, Scheme No 114, Part 2, Vijaynagar, Indore, Madhya Pradesh - 452010</p>

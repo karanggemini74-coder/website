@@ -7,7 +7,7 @@ const GrievanceRedressal: React.FC = () => {
       <div className="bg-slate-50 p-6 rounded-lg mb-8 border border-slate-200">
         <div className="text-sm space-y-1 mb-4 text-slate-700">
           <p><strong>Karan Vijay Vargiya (SEBI Registered Research Analyst)</strong></p>
-          <p><strong>Reg. No.:</strong> INH00000XXXXX</p>
+          <p><strong>Reg. No.:</strong> INH000025470</p>
           <p><strong>Compliance Officer / Grievance Redressal Officer:</strong> KARAN VIJAY VARGIYA</p>
           <p><strong>Compliance Officer / Registered Contact Person:</strong></p>
           <p><strong>Name:</strong> KARAN VIJAY VARGIYA</p>
