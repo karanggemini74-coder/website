@@ -12,12 +12,12 @@ const Disclaimer: React.FC = () => {
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">1. About Us</h2>
           <p>Karan Vijayvargiya (hereinafter referred to as "Research Analyst", "we", "our", "us") is registered with SEBI as a Research Analyst under the provisions of SEBI (Research Analysts) Regulations, 2014.</p>
-          <p className="mt-2 text-sm"><strong>SEBI Registration No.:</strong> INH000025470 | <strong>Validity:</strong> Valid till XX-XX-XXXX | <strong>Type:</strong> Individual</p>
+          <p className="mt-2 text-sm"><strong>SEBI Registration No.:</strong> INH000025470 | <strong>Validity:</strong> Valid till MAR-12-2031 | <strong>Type:</strong> Individual</p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">2. Current Scope of Services</h2>
-          <p>As of now, the scope of services provided by Karan Vijayvargiya, SEBI Reg. No.: INH000025470 (Validity of Certificate not mentioned as per the requirement):</p>
+          <p>As of now, the scope of services provided by Karan Vijayvargiya, SEBI Reg. No.: INH000025470 (Valid till MAR-12-2031):</p>
           <p className="mt-2">As of now, the scope of services we offer to both website visitors and office visit:</p>
           <ul className="list-disc pl-5 space-y-1 mt-2">
             <li>Conducting equity research and technical analysis</li>

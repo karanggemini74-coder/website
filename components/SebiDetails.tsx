@@ -10,7 +10,7 @@ const SebiDetails: React.FC = () => {
     <div className="bg-[#f0f6ff] rounded-2xl p-8 mt-12 mb-12">
       <h3 className="font-bold text-blue-600 mb-4 text-base">SEBI Registered Research Analyst Details:</h3>
       <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
-        <p><strong>Registered Name:</strong> KARAN VIJAY VARGIYA | <strong>Type:</strong> Individual | <strong>Registration No.:</strong> {sebiRegNo} | <strong>Validity:</strong> August 22, 2025 - Perpetual</p>
+        <p><strong>Registered Name:</strong> KARAN VIJAY VARGIYA | <strong>Type:</strong> Individual | <strong>Registration No.:</strong> {sebiRegNo} | <strong>Validity:</strong> Valid till MAR-12-2031</p>
         <p><strong>Registered Office Address:</strong> {officeAddress}</p>
         <p><strong>Tel:</strong> {contactPhone} | <strong>Email:</strong> {contactEmail} | <strong>Enlistment Number (if applicable):</strong> 6728</p>
         <p className="pt-2"><strong>Disclaimer:</strong> Investments in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, membership of BASL and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. The securities quoted anywhere on website is just to showcase our working methodology and not neither meant for Past performance nor for recommendation <a href="#" className="underline">Read More</a></p>

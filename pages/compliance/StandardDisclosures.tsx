@@ -5,7 +5,7 @@ const StandardDisclosures: React.FC = () => {
   return (
     <ComplianceLayout title="Disclosures As Per Securities and Exchange Board of India (Research Analysts) Regulations, 2014">
       <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-8 text-sm">
-        In accordance with the SEBI (Research Analysts) Regulations, 2014, the following disclosures are presented for <strong>Karan Vijayvargiya</strong>, SEBI Reg. No. INH000025470 (Registration valid till XX-XX-XXXX).
+        In accordance with the SEBI (Research Analysts) Regulations, 2014, the following disclosures are presented for <strong>Karan Vijayvargiya</strong>, SEBI Reg. No. INH000025470 (Registration valid till MAR-12-2031).
       </div>
 
       <div className="space-y-8">
@@ -15,7 +15,7 @@ const StandardDisclosures: React.FC = () => {
              <div>
                <p><strong>Name of Research Analyst:</strong><br/>Karan Vijayvargiya</p>
                <p className="mt-2"><strong>SEBI Registration Number:</strong><br/>INH000025470</p>
-               <p className="mt-2"><strong>Validity:</strong><br/>Valid till XX-XX-XXXX</p>
+               <p className="mt-2"><strong>Validity:</strong><br/>Valid till MAR-12-2031</p>
              </div>
              <div>
                <p><strong>Category:</strong><br/>Research Analyst (Individual)</p>

@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
                <div>
                  <h3 className="font-bold text-brand-900">SEBI Registration</h3>
                  <p className="text-sm text-brand-700">Registration No: {sebiRegNo}</p>
-                 <p className="text-xs text-brand-600 mt-1">Valid Until: DD/MM/YYYY</p>
+                 <p className="text-xs text-brand-600 mt-1">Valid Until: MAR-12-2031</p>
                </div>
              </div>
              
