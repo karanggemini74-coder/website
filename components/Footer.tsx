@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Twitter, Linkedin, AtSign } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
@@ -25,10 +25,13 @@ const Footer: React.FC = () => {
               <p><span className="font-semibold text-slate-300">SEBI Reg. No:</span> {sebiRegNo}</p>
               <p className="text-xs mt-2">SEBI Registered Research Analyst providing transparent, research-driven investment insights.</p>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
                <a href="https://www.instagram.com/karanvijayvargiya2/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-500 transition-colors" aria-label="Instagram"><Instagram size={20} /></a>
                <a href="https://www.facebook.com/karanvijayvargiya2/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-500 transition-colors" aria-label="Facebook"><Facebook size={20} /></a>
                <a href="https://www.youtube.com/@karanvijayvargiya1" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-500 transition-colors" aria-label="YouTube"><Youtube size={20} /></a>
+               <a href="https://x.com/karanvv" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 transition-colors" aria-label="Twitter"><Twitter size={20} /></a>
+               <a href="https://www.linkedin.com/in/karan-vijayvargiya-5b463485/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn"><Linkedin size={20} /></a>
+               <a href="https://www.threads.com/@karanvijayvargiya2" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 transition-colors" aria-label="Threads"><AtSign size={20} /></a>
             </div>
           </div>
 
