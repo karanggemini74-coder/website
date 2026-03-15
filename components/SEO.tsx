@@ -19,7 +19,7 @@ const SEO: React.FC<SEOProps> = ({
   type = 'website'
 }) => {
   const siteTitle = "Karan Vijayvargiya | SEBI Registered Research Analyst";
-  const fullTitle = title.includes('|') ? title : `${title} | ${siteTitle}`;
+  const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 
   return (
     <Helmet>
