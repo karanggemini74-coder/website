@@ -11,7 +11,7 @@ const AuditStatus: React.FC = () => {
       </div>
 
       <div className="space-y-6">
-        <p>Since <strong>Karan Vijayvargiya</strong> received its SEBI Research Analyst Registration (<strong>Reg. No. INH000025470</strong>) on <strong>August 22, 2025</strong>, one full financial year has <strong className="text-red-600">not yet been completed</strong>.</p>
+        <p>Since <strong>Karan Vijayvargiya</strong> received its SEBI Research Analyst Registration (<strong>Reg. No. INH000025470</strong>) on <strong>13 March 2026</strong>, one full financial year has <strong className="text-red-600">not yet been completed</strong>.</p>
         
         <div className="bg-red-50 border border-red-200 p-4 rounded-lg">
           <p className="text-sm font-semibold text-red-800">

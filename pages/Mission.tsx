@@ -33,12 +33,12 @@ const Mission: React.FC = () => {
       <div className="relative z-20 max-w-5xl mx-auto px-4 -mt-16">
         <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
           <div className="text-center pt-4 md:pt-0">
-            <span className="block text-4xl font-extrabold text-brand-600 mb-2">1000+</span>
-            <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">Happy Clients</span>
+            <span className="block text-4xl font-extrabold text-brand-600 mb-2">Unbiased</span>
+            <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">Research</span>
           </div>
           <div className="text-center pt-8 md:pt-0">
-            <span className="block text-4xl font-extrabold text-brand-600 mb-2">5000+</span>
-            <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">Research Reports</span>
+            <span className="block text-4xl font-extrabold text-brand-600 mb-2">Client</span>
+            <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">Centric Approach</span>
           </div>
           <div className="text-center pt-8 md:pt-0">
             <span className="block text-4xl font-extrabold text-brand-600 mb-2">100%</span>
