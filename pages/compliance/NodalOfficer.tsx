@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ComplianceLayout from '../../components/ComplianceLayout';
 
 const NodalOfficer: React.FC = () => {
@@ -34,7 +35,7 @@ const NodalOfficer: React.FC = () => {
         <h3 className="font-bold text-blue-900 mb-3">How to File a Complaint</h3>
         <div className="text-sm text-blue-800 space-y-2">
           <p>If you have any grievances or complaints, you may contact the Nodal Officer through the above-mentioned email or phone number. We are committed to resolving all complaints in a timely and fair manner.</p>
-          <p>For detailed information on our grievance redressal process, please visit our <a href="#/compliance/grievance-redressal" className="underline font-bold">Grievance Redressal Policy</a>.</p>
+          <p>For detailed information on our grievance redressal process, please visit our <Link to="/compliance/grievance-redressal" className="underline font-bold">Grievance Redressal Policy</Link>.</p>
           <p>You may also file complaints directly with:
              <br/>
              1. <strong>SEBI SCORES:</strong> <a href="https://scores.sebi.gov.in/" target="_blank" rel="noreferrer" className="underline font-bold">https://scores.sebi.gov.in/</a>

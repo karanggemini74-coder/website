@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ComplianceLayout from '../../components/ComplianceLayout';
 
 const ComplaintsStatus: React.FC = () => {
@@ -179,7 +180,7 @@ const ComplaintsStatus: React.FC = () => {
         </section>
 
         <div className="text-xs text-slate-500 leading-relaxed border-t border-slate-200 pt-6">
-           Any complaints received by us will be handled as per the process mentioned in our <a href="#/compliance/grievance-redressal" className="text-blue-600 underline hover:text-blue-800 font-medium">Grievance Redressal Policy</a> and the same would be handled by a dedicated Customer Service Team and Grievance Officer.
+           Any complaints received by us will be handled as per the process mentioned in our <Link to="/compliance/grievance-redressal" className="text-blue-600 underline hover:text-blue-800 font-medium">Grievance Redressal Policy</Link> and the same would be handled by a dedicated Customer Service Team and Grievance Officer.
         </div>
       </div>
     </ComplianceLayout>
