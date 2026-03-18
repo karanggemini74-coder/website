@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-wrap gap-4">
                <a href="https://www.instagram.com/karanvijayvargiya2/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-500 transition-colors" aria-label="Instagram"><Instagram size={20} /></a>
                <a href="https://www.facebook.com/karanvijayvargiya2/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-500 transition-colors" aria-label="Facebook"><Facebook size={20} /></a>
-               <a href="https://www.youtube.com/@karanvijayvargiya1" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-500 transition-colors" aria-label="YouTube"><Youtube size={20} /></a>
+               <a href="https://www.youtube.com/@karanvijayvargiya-h7l" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-500 transition-colors" aria-label="YouTube"><Youtube size={20} /></a>
                <a href="https://x.com/karanvv" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 transition-colors" aria-label="Twitter"><Twitter size={20} /></a>
                <a href="https://www.linkedin.com/in/karan-vijayvargiya-5b463485/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn"><Linkedin size={20} /></a>
                <a href="https://www.threads.com/@karanvijayvargiya2" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 transition-colors" aria-label="Threads"><AtSign size={20} /></a>

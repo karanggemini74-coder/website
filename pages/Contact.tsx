@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                 <div className="flex flex-wrap gap-4">
                   <a href="https://www.instagram.com/karanvijayvargiya2/" target="_blank" rel="noreferrer" className="p-2 bg-pink-100 text-pink-600 rounded-lg hover:bg-pink-200 transition-colors"><Instagram size={20}/></a>
                   <a href="https://www.facebook.com/karanvijayvargiya2/" target="_blank" rel="noreferrer" className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"><Facebook size={20}/></a>
-                  <a href="https://www.youtube.com/@karanvijayvargiya1" target="_blank" rel="noreferrer" className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors"><Youtube size={20}/></a>
+                  <a href="https://www.youtube.com/@karanvijayvargiya-h7l" target="_blank" rel="noreferrer" className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors"><Youtube size={20}/></a>
                   <a href="https://x.com/karanvv" target="_blank" rel="noreferrer" className="p-2 bg-slate-100 text-slate-800 rounded-lg hover:bg-slate-200 transition-colors"><Twitter size={20}/></a>
                   <a href="https://www.linkedin.com/in/karan-vijayvargiya-5b463485/" target="_blank" rel="noreferrer" className="p-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors"><Linkedin size={20}/></a>
                   <a href="https://www.threads.com/@karanvijayvargiya2" target="_blank" rel="noreferrer" className="p-2 bg-slate-100 text-slate-900 rounded-lg hover:bg-slate-200 transition-colors"><AtSign size={20}/></a>
