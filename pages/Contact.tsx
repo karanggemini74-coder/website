@@ -123,23 +123,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="col-span-1 lg:col-span-2">
-            <div className="bg-brand-600 rounded-2xl shadow-xl h-full p-8 md:p-12 text-white">
-               <h2 className="text-2xl font-bold mb-2">Send us a Message</h2>
-               <p className="text-brand-100 mb-8">Fill out the form below and we will get back to you within 24-48 hours.</p>
-               
-               <div className="text-left">
-                  <form className="space-y-4">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Full Name *" className="w-full p-3 rounded-lg bg-brand-700 border-brand-500 placeholder-brand-300 focus:outline-none focus:ring-1 focus:ring-white" />
-                        <input type="email" placeholder="Email Address *" className="w-full p-3 rounded-lg bg-brand-700 border-brand-500 placeholder-brand-300 focus:outline-none focus:ring-1 focus:ring-white" />
-                      </div>
-                      <input type="text" placeholder="Phone Number" className="w-full p-3 rounded-lg bg-brand-700 border-brand-500 placeholder-brand-300 focus:outline-none focus:ring-1 focus:ring-white" />
-                      <input type="text" placeholder="Subject *" className="w-full p-3 rounded-lg bg-brand-700 border-brand-500 placeholder-brand-300 focus:outline-none focus:ring-1 focus:ring-white" />
-                      <textarea rows={5} placeholder="Message *" className="w-full p-3 rounded-lg bg-brand-700 border-brand-500 placeholder-brand-300 focus:outline-none focus:ring-1 focus:ring-white"></textarea>
-                      <button className="w-full bg-white text-brand-600 font-bold py-3 rounded-lg hover:bg-brand-50 transition-colors">Send Message &rarr;</button>
-                  </form>
-               </div>
-            </div>
+             <ContactForm />
           </div>
 
         </div>

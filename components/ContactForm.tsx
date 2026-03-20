@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
 
 interface FormData {
@@ -30,6 +30,15 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [submittedName, setSubmittedName] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      setIsSuccess(true);
+      // Optional: remove the query param from URL without reloading
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -99,31 +108,12 @@ const ContactForm: React.FC = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    if (validateForm()) {
-      // Sanitize before usage/transmission
-      const cleanData = {
-        name: sanitizeInput(formData.name),
-        email: sanitizeInput(formData.email),
-        phone: sanitizeInput(formData.phone),
-        service: sanitizeInput(formData.service),
-        message: sanitizeInput(formData.message),
-      };
-
-      // Simulating API call with sanitized data
-      console.log('Secure Form Submission:', cleanData);
-      
-      setTimeout(() => {
-        // Securely setting state for rendering. React will escape this when rendering {submittedName} below.
-        setSubmittedName(cleanData.name);
-        setIsSuccess(true);
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-        setIsSubmitting(false);
-      }, 500);
-    } else {
+    if (!validateForm()) {
+      e.preventDefault();
       setIsSubmitting(false);
+    } else {
+      setIsSubmitting(true);
+      // Let the form submit natively to formsubmit.co
     }
   };
 
@@ -135,7 +125,7 @@ const ContactForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
         <p className="text-brand-100 mb-6">
-          Thank you, <strong className="text-white">{submittedName}</strong>. We have received your inquiry and will contact you shortly.
+          Thank you for reaching out. We have received your inquiry and will contact you shortly.
         </p>
         <button 
           onClick={() => setIsSuccess(false)}
@@ -154,7 +144,10 @@ const ContactForm: React.FC = () => {
         <p className="text-brand-100">Ready to start your investment journey? Contact us for a free consultation.</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <form action="https://formsubmit.co/ra@karanvijayvargiya.com" method="POST" onSubmit={handleSubmit} className="space-y-4" noValidate>
+        <input type="hidden" name="_subject" value="New Contact Form Submission" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value={window.location.origin + window.location.pathname + "?success=true"} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-wider mb-1">Full Name *</label>
