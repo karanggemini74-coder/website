@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Shield, Facebook, Instagram, Youtube, Gavel, ExternalLink, Twitter, Linkedin, AtSign } from 'lucide-react';
+import { Mail, Phone, MapPin, Shield, Facebook, Instagram, Youtube, Gavel, ExternalLink, Twitter, Linkedin, AtSign, MessageCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
 
@@ -112,6 +112,7 @@ const Contact: React.FC = () => {
                 <h3 className="font-bold text-slate-800 mb-4">Follow Us</h3>
                 <div className="flex flex-wrap gap-4">
                   <a href="https://www.instagram.com/karanvijayvargiya2/" target="_blank" rel="noreferrer" className="p-2 bg-pink-100 text-pink-600 rounded-lg hover:bg-pink-200 transition-colors"><Instagram size={20}/></a>
+                  <a href="https://wa.me/918269722278" target="_blank" rel="noreferrer" className="p-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition-colors"><MessageCircle size={20}/></a>
                   <a href="https://www.facebook.com/karanvijayvargiya2/" target="_blank" rel="noreferrer" className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"><Facebook size={20}/></a>
                   <a href="https://www.youtube.com/@karanvijayvargiya-h7l" target="_blank" rel="noreferrer" className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors"><Youtube size={20}/></a>
                   <a href="https://x.com/karanvv" target="_blank" rel="noreferrer" className="p-2 bg-slate-100 text-slate-800 rounded-lg hover:bg-slate-200 transition-colors"><Twitter size={20}/></a>
