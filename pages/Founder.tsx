@@ -41,10 +41,12 @@ const Founder: React.FC = () => {
             <div className="lg:w-2/5 relative min-h-[500px] lg:min-h-full">
               <div className="absolute inset-0 bg-slate-200">
                 <img 
-                  src="https://lh3.googleusercontent.com/d/12GfNjWA-HHrpeqmKhSyCgnp7hbAhcneF" 
+                  src="/founder.png" 
                   alt="Karan Vijayvargiya" 
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop";
+                  }}
                   loading="lazy"
                   decoding="async"
                 />

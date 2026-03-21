@@ -537,10 +537,12 @@ const Home: React.FC = () => {
                <div className="absolute top-4 -left-4 w-full h-full border-2 border-brand-200 rounded-3xl z-0"></div>
                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                  <img 
-                   src="https://lh3.googleusercontent.com/d/12GfNjWA-HHrpeqmKhSyCgnp7hbAhcneF" 
+                   src="/founder.png" 
                    alt="Karan Vijayvargiya" 
                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                   referrerPolicy="no-referrer"
+                   onError={(e) => {
+                     e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop";
+                   }}
                    loading="lazy"
                    decoding="async"
                  />
