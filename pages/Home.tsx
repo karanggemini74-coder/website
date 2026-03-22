@@ -540,12 +540,12 @@ const Home: React.FC = () => {
                <div className="absolute top-4 -left-4 w-full h-full border-2 border-brand-200 rounded-3xl z-0"></div>
                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                  <img 
-                   src="/founder.png?v=1" 
+                   src="/founder-image.png?v=2" 
                    alt="Karan Vijayvargiya" 
                    width="600"
                    height="750"
                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                   loading="lazy"
+                   fetchPriority="high"
                    decoding="async"
                  />
                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-8">
