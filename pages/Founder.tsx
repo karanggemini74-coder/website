@@ -41,7 +41,7 @@ const Founder: React.FC = () => {
             <div className="lg:w-2/5 relative min-h-[500px] lg:min-h-full">
               <div className="absolute inset-0 bg-slate-200">
                 <img 
-                  src="/founder-image.png?v=2" 
+                  src="/founder.png?v=3" 
                   alt="Karan Vijayvargiya" 
                   className="w-full h-full object-cover"
                   fetchPriority="high"

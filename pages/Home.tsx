@@ -540,7 +540,7 @@ const Home: React.FC = () => {
                <div className="absolute top-4 -left-4 w-full h-full border-2 border-brand-200 rounded-3xl z-0"></div>
                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                  <img 
-                   src="/founder-image.png?v=2" 
+                   src="/founder.png?v=3" 
                    alt="Karan Vijayvargiya" 
                    width="600"
                    height="750"
