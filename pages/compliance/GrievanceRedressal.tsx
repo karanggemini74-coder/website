@@ -40,7 +40,7 @@ const GrievanceRedressal: React.FC = () => {
             <br/>
             1. <strong>SEBI SCORES:</strong> <a href="https://scores.sebi.gov.in/" target="_blank" rel="noreferrer" className="text-blue-600 underline">https://scores.sebi.gov.in/</a>
             <br/>
-            2. <strong>Smart ODR:</strong> <a href="https://smartodr.in/" target="_blank" rel="noreferrer" className="text-blue-600 underline">https://smartodr.in/</a>
+            2. <strong>Smart ODR:</strong> <a href="https://smartodr.in/login" target="_blank" rel="noreferrer" className="text-blue-600 underline">https://smartodr.in/login</a>
           </p>
         </section>
 

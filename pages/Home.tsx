@@ -46,10 +46,13 @@ const Home: React.FC = () => {
         <motion.div style={{ y: yBg }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-brand-900/90 to-slate-900/80 z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=2000&auto=format&fit=crop&fm=webp" 
+            src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=75&w=1200&auto=format&fit=crop&fm=webp" 
             alt="Stock Market Graph" 
             className="w-full h-full object-cover opacity-30"
             fetchPriority="high"
+            width="1200"
+            height="800"
+            loading="eager"
           />
         </motion.div>
         
@@ -535,10 +538,12 @@ const Home: React.FC = () => {
               className="lg:w-1/2 relative"
             >
                <div className="absolute top-4 -left-4 w-full h-full border-2 border-brand-200 rounded-3xl z-0"></div>
-               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                  <img 
                    src="/founder.png" 
                    alt="Karan Vijayvargiya" 
+                   width="600"
+                   height="750"
                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                    onError={(e) => {
                      e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop";

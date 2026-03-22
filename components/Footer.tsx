@@ -60,6 +60,8 @@ const Footer: React.FC = () => {
               <li><Link to="/compliance/standard-disclosures" className="hover:text-brand-400 transition-colors">Mandatory Disclosures</Link></li>
               <li><Link to="/compliance/nodal-officer" className="hover:text-brand-400 transition-colors">Nodal Officer</Link></li>
               <li><Link to="/compliance/audit-status" className="hover:text-brand-400 transition-colors">Audit Report</Link></li>
+              <li><a href="https://scores.sebi.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-400 transition-colors">SCORES Portal</a></li>
+              <li><a href="https://smartodr.in/login" target="_blank" rel="noopener noreferrer" className="hover:text-brand-400 transition-colors">SMART ODR Portal</a></li>
             </ul>
           </div>
 

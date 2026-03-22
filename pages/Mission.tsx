@@ -157,7 +157,9 @@ const Mission: React.FC = () => {
                {/* Abstract visual representation of vision */}
                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                   <img 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop&fm=webp" 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=75&w=1200&auto=format&fit=crop&fm=webp" 
+                    width="1200"
+                    height="800"
                     alt="Vision Strategy" 
                     className="w-full h-auto object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                     loading="lazy"
