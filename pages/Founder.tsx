@@ -41,12 +41,9 @@ const Founder: React.FC = () => {
             <div className="lg:w-2/5 relative min-h-[500px] lg:min-h-full">
               <div className="absolute inset-0 bg-slate-200">
                 <img 
-                  src="/founder.png" 
+                  src="/founder.png?v=1" 
                   alt="Karan Vijayvargiya" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop";
-                  }}
                   fetchPriority="high"
                   decoding="async"
                 />

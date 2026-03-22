@@ -540,14 +540,11 @@ const Home: React.FC = () => {
                <div className="absolute top-4 -left-4 w-full h-full border-2 border-brand-200 rounded-3xl z-0"></div>
                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                  <img 
-                   src="/founder.png" 
+                   src="/founder.png?v=1" 
                    alt="Karan Vijayvargiya" 
                    width="600"
                    height="750"
                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                   onError={(e) => {
-                     e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop";
-                   }}
                    loading="lazy"
                    decoding="async"
                  />
