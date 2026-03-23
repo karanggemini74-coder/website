@@ -46,13 +46,14 @@ const Home: React.FC = () => {
         <motion.div style={{ y: yBg }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-brand-900/90 to-slate-900/80 z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=75&w=1200&auto=format&fit=crop&fm=webp" 
+            src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop" 
             alt="Stock Market Graph" 
             className="w-full h-full object-cover opacity-30"
             fetchPriority="high"
             width="1200"
             height="800"
             loading="eager"
+            referrerPolicy="no-referrer"
           />
         </motion.div>
         
@@ -542,6 +543,7 @@ const Home: React.FC = () => {
                  <img 
                    src="/karan-founder-final.png?v=10" 
                    alt="Karan Vijayvargiya" 
+                   referrerPolicy="no-referrer"
                    width="600"
                    height="750"
                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"

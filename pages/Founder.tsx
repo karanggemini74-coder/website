@@ -43,6 +43,7 @@ const Founder: React.FC = () => {
                 <img 
                   src="/karan-founder-final.png?v=10" 
                   alt="Karan Vijayvargiya" 
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
                   fetchPriority="high"
                   decoding="async"
