@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
           <div className="bg-slate-800 rounded-lg p-6 mb-8 text-[11px] text-slate-400 leading-relaxed text-justify">
             <p className="font-bold text-slate-200 mb-2 uppercase">Statutory Disclaimer</p>
             <p className="mb-2">
-              Registration granted by SEBI, membership of BASL (in case of IAs) and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
+              Registration granted by SEBI, membership of BASL and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
             </p>
             <p className="mb-2">
               Investment in securities market are subject to market risks. Read all the related documents carefully before investing.

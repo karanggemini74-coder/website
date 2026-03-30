@@ -297,7 +297,7 @@ const Services: React.FC = () => {
                 <h4 className="text-sm font-bold text-slate-700 uppercase tracking-widest mb-3">Regulatory Disclaimer</h4>
                 <p className="text-xs text-slate-500 leading-relaxed max-w-3xl mx-auto">
                     Investments in securities market are subject to market risks. Read all the related documents carefully before investing. 
-                    Registration granted by SEBI, membership of BASL (in case of IAs) and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
+                    Registration granted by SEBI, membership of BASL and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
                 </p>
             </motion.div>
         </div>
