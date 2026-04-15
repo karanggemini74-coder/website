@@ -10,7 +10,7 @@ const ComplaintsStatus: React.FC = () => {
         {/* Table 1: Monthly Data */}
         <section>
           <h2 className="text-xl font-bold mb-2 text-slate-900">Number Of Client's Complaints</h2>
-          <p className="text-sm text-slate-500 mb-6 uppercase font-medium tracking-wide">(DATA OF THE MONTH ENDING FEBRUARY - 2026)</p>
+          <p className="text-sm text-slate-500 mb-6 uppercase font-medium tracking-wide">(DATA OF THE MONTH ENDING MARCH - 2026)</p>
           
           <div className="overflow-x-auto border border-slate-200 rounded-lg shadow-sm">
             <table className="min-w-full text-xs md:text-sm text-center">
@@ -88,7 +88,7 @@ const ComplaintsStatus: React.FC = () => {
                <tbody className="divide-y divide-slate-200 bg-white">
                  <tr className="hover:bg-slate-50 transition-colors">
                    <td className="p-4 border-r border-slate-200 text-slate-600">1</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">FEB - 2026</td>
+                   <td className="p-4 border-r border-slate-200 text-slate-600">MARCH - 2026</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
@@ -96,7 +96,7 @@ const ComplaintsStatus: React.FC = () => {
                  </tr>
                  <tr className="hover:bg-slate-50 transition-colors">
                    <td className="p-4 border-r border-slate-200 text-slate-600">2</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">JAN - 2026</td>
+                   <td className="p-4 border-r border-slate-200 text-slate-600">FEB - 2026</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
@@ -104,7 +104,7 @@ const ComplaintsStatus: React.FC = () => {
                  </tr>
                  <tr className="hover:bg-slate-50 transition-colors">
                    <td className="p-4 border-r border-slate-200 text-slate-600">3</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">DEC - 2025</td>
+                   <td className="p-4 border-r border-slate-200 text-slate-600">JAN - 2026</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
@@ -148,7 +148,7 @@ const ComplaintsStatus: React.FC = () => {
                <tbody className="divide-y divide-slate-200 bg-white">
                  <tr className="hover:bg-slate-50 transition-colors">
                    <td className="p-4 border-r border-slate-200 text-slate-600">1</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">2024-25</td>
+                   <td className="p-4 border-r border-slate-200 text-slate-600">2025-26</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
@@ -156,7 +156,7 @@ const ComplaintsStatus: React.FC = () => {
                  </tr>
                   <tr className="hover:bg-slate-50 transition-colors">
                    <td className="p-4 border-r border-slate-200 text-slate-600">2</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">2025-26</td>
+                   <td className="p-4 border-r border-slate-200 text-slate-600">2026-27</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
                    <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>

@@ -21,19 +21,22 @@ const SEO: React.FC<SEOProps> = ({
   const siteTitle = "Karan Vijayvargiya | SEBI Registered Research Analyst";
   const fullTitle = title.includes('|') ? title : `${title} | ${siteTitle}`;
 
+  const currentUrl = url || window.location.href;
+  const canonicalUrl = currentUrl.replace('https://www.', 'https://');
+
   return (
     <Helmet>
       {/* Standard metadata tags */}
       <title>{fullTitle}</title>
       <meta name='description' content={description} />
       <meta name='keywords' content={keywords} />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteTitle} />
 
