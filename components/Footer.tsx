@@ -4,7 +4,7 @@ import { Facebook, Instagram, Youtube, Twitter, Linkedin, AtSign, MessageCircle 
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
-  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'ra@karanvijayvargiya.com';
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'karanvijayvargiya29@gmail.com';
   const contactPhone = import.meta.env.VITE_CONTACT_PHONE || '+91 89592 22227';
   const sebiRegNo = import.meta.env.VITE_SEBI_REG_NO || 'INH000025470';
   const officeAddress = import.meta.env.VITE_OFFICE_ADDRESS || 'Office 101, 654 Shyam Aashrey, Scheme No 114, Part 2, Vijaynagar, Indore, Madhya Pradesh - 452010';

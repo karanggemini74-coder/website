@@ -13,7 +13,7 @@ const NodalOfficer: React.FC = () => {
           </div>
           <div className="p-6 space-y-2 text-sm text-slate-700">
              <p><strong>Name & Designation:</strong> Karan Vijay Vargiya</p>
-             <p><strong>Email:</strong> <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600">ra@karanvijayvargiya.com</a></p>
+             <p><strong>Email:</strong> <a href="mailto:karanvijayvargiya29@gmail.com" className="text-brand-600">karanvijayvargiya29@gmail.com</a></p>
              <p><strong>Phone:</strong> +91 89592 22227</p>
           </div>
         </div>
@@ -25,7 +25,7 @@ const NodalOfficer: React.FC = () => {
           </div>
           <div className="p-6 space-y-2 text-sm text-slate-700">
              <p><strong>Name of Officer:</strong> Karan Vijay Vargiya</p>
-             <p><strong>Dedicated Email:</strong> <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600">ra@karanvijayvargiya.com</a></p>
+             <p><strong>Dedicated Email:</strong> <a href="mailto:karanvijayvargiya29@gmail.com" className="text-brand-600">karanvijayvargiya29@gmail.com</a></p>
              <p><strong>Phone Helpline:</strong> +91 89592 22227</p>
           </div>
         </div>

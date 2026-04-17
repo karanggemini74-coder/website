@@ -144,7 +144,7 @@ const ContactForm: React.FC = () => {
         <p className="text-brand-100">Ready to start your investment journey? Contact us for a free consultation.</p>
       </div>
 
-      <form action="https://formsubmit.co/ra@karanvijayvargiya.com" method="POST" onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <form action="https://formsubmit.co/karanvijayvargiya29@gmail.com" method="POST" onSubmit={handleSubmit} className="space-y-4" noValidate>
         <input type="hidden" name="_subject" value="New Contact Form Submission" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value={window.location.origin + window.location.pathname + "?success=true"} />

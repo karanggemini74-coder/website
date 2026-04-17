@@ -4,172 +4,39 @@ import ComplianceLayout from '../../components/ComplianceLayout';
 const Disclaimer: React.FC = () => {
   return (
     <ComplianceLayout title="Disclaimer">
-      <div className="bg-red-50 border border-red-200 p-4 rounded-lg mb-8 text-sm text-red-800">
-        <strong>This disclaimer is applicable to the services provided and advice/research offered by Karan Vijayvargiya.</strong> By accessing the website, you acknowledge that you understand and agree to the points in this disclaimer.
-      </div>
-
-      <div className="space-y-8">
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">1. About Us</h2>
-          <p>Karan Vijayvargiya (hereinafter referred to as "Research Analyst", "we", "our", "us") is registered with SEBI as a Research Analyst under the provisions of SEBI (Research Analysts) Regulations, 2014.</p>
-          <p className="mt-2 text-sm"><strong>SEBI Registration No.:</strong> INH000025470 | <strong>Validity:</strong> Valid till MAR-12-2031 | <strong>Type:</strong> Individual</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">2. Current Scope of Services</h2>
-          <p>As of now, the scope of services provided by Karan Vijayvargiya, SEBI Reg. No.: INH000025470 (Valid till MAR-12-2031):</p>
-          <p className="mt-2">As of now, the scope of services we offer to both website visitors and office visit:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>Conducting equity research and technical analysis</li>
-            <li>Providing buy/sell/hold recommendations</li>
-            <li>Publishing research reports and market insights</li>
-            <li>Stock recommendations and portfolio guidance</li>
-            <li>Investment advisory services</li>
-            <li>Educational courses on investing and trading</li>
-            <li>Market updates and analysis (Coming soon)</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">3. No Investment Advice</h2>
-          <p>Nothing on this website or in our research reports should be construed as:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>An offer to buy or sell any securities</li>
-            <li>A solicitation to invest in any particular stock or security</li>
-            <li>Investment advice tailored to your specific financial situation</li>
-            <li>A guarantee of profits or returns</li>
-            <li>Tax, legal, or accounting advice</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">4. No Guarantee / No Assured Returns</h2>
-          <p>We do NOT guarantee:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>Profits or returns of any kind</li>
-            <li>Accuracy or completeness of research reports</li>
-            <li>Success of any investment recommendation</li>
-            <li>Protection from market losses or volatility</li>
-            <li>Suitability of recommendations for your risk profile</li>
-          </ul>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4 text-sm">
-            <strong>Important:</strong> SEBI registration does not guarantee performance, profits, or protection from losses. It only certifies regulatory compliance.
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">5. Market Risks</h2>
-          <p><strong>Stock market investments are subject to market risks.</strong> Read all research documents, disclosures, and risk warnings carefully before investing.</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li><strong>Market Volatility:</strong> Stock prices can fluctuate rapidly and unpredictably</li>
-            <li><strong>Economic Factors:</strong> Global events, policy changes, and economic conditions affect markets</li>
-            <li><strong>Company Performance:</strong> Individual stock performance depends on company fundamentals and management</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">6. Research Analyst Disclosure</h2>
-          <p>I, Karan Vijayvargiya (SEBI Registered Research Analyst - Reg. No.: INH000025470), hereby disclose:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>I may or may not have positions in the stocks recommended in research reports. Any personal holdings will be disclosed in individual research reports.</li>
-            <li>I do not receive any compensation from companies covered in research reports (other than subscription fees from clients).</li>
-            <li>All research is conducted independently based on publicly available information and proprietary analysis.</li>
-            <li>No conflict of interest exists at the time of publication.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">7. Responsibility of Users</h2>
-          <p>As a user/investor, you are solely responsible for:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>Conducting your own due diligence before making investment decisions</li>
-            <li>Evaluating risks and suitability based on your financial situation</li>
-            <li>Consulting with your financial advisor, tax consultant, or legal advisor</li>
-            <li>Understanding that past performance is not indicative of future results</li>
-            <li>Any losses or damages arising from investment decisions</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">8. Market Risk Warning</h2>
-          <p>Investment in the stock market involves substantial risks, including but not limited to:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>Loss of principal amount invested</li>
-            <li>Market volatility and price fluctuations</li>
-            <li>Liquidity risks (inability to sell securities quickly)</li>
-            <li>Interest rate risks and currency risks</li>
-          </ul>
-           <div className="bg-red-50 border-l-4 border-red-500 p-4 mt-4 text-sm text-red-800">
-            <strong>RISK WARNING:</strong> You may lose part or all of your invested capital. Do not invest money you cannot afford to lose.
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">9. Accuracy of Information</h2>
-          <p>While we strive to provide accurate and up-to-date information, we cannot guarantee the accuracy, completeness, or timeliness of the content on this website or in research reports.</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>Information is based on publicly available data, which may be outdated or incorrect</li>
-            <li>Market conditions change rapidly, and research may become outdated</li>
-            <li>We are not liable for any errors, omissions, or inaccuracies</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">10. No Liability</h2>
-          <p>We shall not be liable for any direct, indirect, incidental, or consequential damages arising from:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>Use of our website, services, or research reports</li>
-            <li>Investment decisions made based on our recommendations</li>
-            <li>Market losses, volatility, or adverse price movements</li>
-            <li>Errors, omissions, or delays in research reports</li>
-            <li>Technical issues, website downtime, or interruptions</li>
-          </ul>
-          <p className="mt-2">Your use of our services is entirely at your own risk. We assume no responsibility for your investment outcomes.</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">11. Third-Party Links</h2>
-          <p>Our website may contain links to third-party websites or resources. We do not endorse, control, or assume responsibility for:</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-            <li>Content, accuracy, or privacy policies of third-party websites</li>
-            <li>Any transactions or interactions with third parties</li>
-            <li>Losses arising from third-party services or products</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">12. Communication & SMS Disclaimer</h2>
-          <p>By subscribing to our services, you consent to receive research reports, stock recommendations, and other investment-related information via email or SMS (if applicable).</p>
-          <p className="mt-2 text-sm">You may opt-out at any time by contacting us at <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600">ra@karanvijayvargiya.com</a>.</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">13. No Guaranteed Price-Return</h2>
-          <p>We do not and cannot guarantee any specific price targets or returns on recommended stocks or securities.</p>
-          <ul className="list-disc pl-5 space-y-1 mt-2">
-             <li>All target prices are estimates based on available information and may not be achieved</li>
-             <li>Market conditions can change rapidly, affecting stock performance</li>
-             <li>Past recommendations' performance does NOT guarantee future success</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">14. Changes to this Disclaimer</h2>
-          <p>We reserve the right to modify this disclaimer at any time without prior notice. Updated disclaimers will be posted on this page. Continued use of our services constitutes acceptance of the revised disclaimer.</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">15. Contact Information</h2>
-          <p>If you have any questions or concerns regarding this disclaimer, please contact us:</p>
-          <div className="bg-slate-50 p-4 rounded-lg mt-4 text-sm">
-            <p className="font-bold">Karan Vijay Vargiya (SEBI Registered Research Analyst)</p>
-            <p><strong>SEBI Registration No.:</strong> INH000025470</p>
-            <p><strong>Email:</strong> <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600">ra@karanvijayvargiya.com</a></p>
-            <p><strong>Phone:</strong> +91 89592 22227</p>
-            <p><strong>Address:</strong> Office 101, 654 Shyam Aashrey, Scheme No 114, Part 2, Vijaynagar, Indore, Madhya Pradesh - 452010</p>
-            <p><strong>Website:</strong> www.karanvijayvargiya.com</p>
-          </div>
-        </section>
+      <div className="space-y-4 text-slate-700 text-sm leading-relaxed pb-8">
+        <ul className="list-disc pl-6 space-y-4">
+          <li>Karan Vijayvargiya is registered with SEBI as Individual Research Analyst with Registration number INH000025470 on 13/03/2026 pursuant to which it provides Research Analyst services to its clients.</li>
+          <li>I am not affiliated with any other intermediaries or receive any brokerage or commission from any third party.</li>
+          <li>The SEBI has issued no penalties/directions under the SEBI Act or any other regulatory body.</li>
+          <li>I do not recommend any stock broker or other intermediary to a client, nor do I receive any consideration by way of remuneration or compensation or in any other form whatsoever from the stock broker or another intermediary.</li>
+          <li>Investment in equity shares has its own risks. Sincere efforts have been made to present the right investment perspective. The information contained herein is based on analysis and on sources that I consider reliable. I, however does not vouch for the consistency or the completeness thereof. This material is for personal information and I am not responsible for any loss incurred due to it & take no responsibility whatsoever for any financial profits or loss which may arise from the recommendations above.</li>
+          <li>I do not provide any promise or assurance of favourable view for a particular industry or sector or business group in any manner. The investor is requested to take into consideration all the risk factors including their financial condition and suitability to risk return profile before investing.</li>
+          <li>The information and views in this website & all the services that I provide are believed to be reliable, but I do not accept any responsibility (or liability) for errors of fact or opinion. Users have the right to choose the product/s that suits them the most</li>
+          <li>I or any other person related to me might be holding positions in the stocks recommended.</li>
+          <li>The research recommendations are provided to all our clients who are entitled to receive the research reports. Any Client (Paid or Unpaid), any third party or anyone else have no rights to forward or share our calls or SMS or Reports or Any Information Provided by us to/with anyone (through any medium) which is received directly or indirectly by them. If found so, then serious legal actions can be taken.</li>
+          <li>I ensure that the individuals employed as research analyst are separate from other employees who are performing sales trading, dealing, corporate finance advisory or any other activity that may affect the independence of our research report/recommendations. However, these individuals may receive feedback from sales or trading personnel of brokerage division to ascertain the impact of research report/recommendations.</li>
+          <li>I also ensure that if a client wants an opinion on a specific position, such suggestion/view under any circumstances shall be considered as an opinion (not advice). I am not liable for any losses whatsoever the client may incur in accepting this opinion.</li>
+          <li>I do not have any association in any manner with any issuer of products/securities; this ensures that there are no actual or potential conflicts of interest. This also ensures that objectivity or independence in the carrying on research services is not compromised.</li>
+          <li>Investment in securities market is subject to market risks. Read all the related documents carefully before investing.</li>
+          <li>Registration granted by SEBI and certification from NISM is no way guarantee performance of the intermediary or provide any assurance of returns to investors.</li>
+          <li>By accessing www.karanvijayvargiya.com or any of its associate/group sites, you have read, understood and agree to be legally bound by the terms of the following disclaimer and user agreement.</li>
+          <li>I had taken due care and caution in compilation of data for its website. I also advise users to check with other certified experts before taking any investment decision. However, I do not guarantee the consistency, adequacy or completeness of any information and is not responsible for any errors or omissions or for the results obtained from the use of such information. I do hereby especially state that it has no financial liability whatsoever to any user on account of the use of information provided on its website.</li>
+          <li>I am not responsible for any errors, omissions or representations on any of our pages or on any links on any of our pages. I do not endorse in anyway any advertisers on our website pages. Please verify the veracity of all information on your own before undertaking any alliance.</li>
+          <li>The information on this website is updated from time to time. I, however exclude any warranties (whether expressed or implied), as to the quality, consistency, efficacy, completeness, performance, fitness or any of the contents of the Website, including (but not limited) to any comments, feedback and advertisements contained within the Site.</li>
+          <li>This website contains material in the form of inputs submitted by users and I do accept no responsibility for the content or consistency of such content nor do I make any representations by virtue of the contents of this website in respect of the existence or availability of any goods and services advertised in the contributory sections. I also make no warranty that the contents of the website are free from infection by viruses or anything else which has contaminating or destructive properties and shall have no liability in respect thereof.</li>
+          <li>Part of this website may contain advertising and other material submitted to us by third parties. Kindly note that those advertisers are responsible for ensuring that material submitted for inclusion on the website complies with all legal requirements. Although acceptance of advertisements on the Website is subject to our terms and conditions which are available on request, I do not accept liability in respect of any advertisements.</li>
+          <li>There are risks associated with utilizing internet-based information and research dissemination services. Subscribers are advised to understand that the services can fail due to failure of hardware, software, and Internet connection. While I also ensure that the messages are delivered in time to the subscriber’s mobile network, the delivery of these messages to the customer’s mobile phone/handset/desktop/iPad/tablet/laptop is the responsibility of the customer’s mobile network/internet connection/wifi. The messages may be delayed and/or not delivered to the customer’s mobile phone/handset on certain days, owing to technical reasons, and the Karan Vijayvargiya cannot be held responsible for the same.</li>
+          <li>Stock trading is inherently risky, and you agree to assume complete and full responsibility for the outcomes of all trading decisions that you make.</li>
+          <li>Unlike an actual performance record, simulated results do not represent actual trading. No representation is being made that any account will or is likely to achieve profits or losses similar to those shown.</li>
+          <li>You, and not me, assume the entire cost and risk of any trading you choose to undertake. You are solely responsible for making your own investment decisions. If you choose to engage in transactions with or without seeking advice from a licensed and qualified financial advisor or entity, then such decision and any consequences flowing there from are your sole responsibility. I or any employees are in no way liable for the use of the information by others in investing or trading in investment vehicles.</li>
+          <li>I also encourage all investors to use the services as a resource to further their own research on all featured companies, stocks, sectors, markets and information presented on the site.</li>
+          <li>I, my management, my associate companies and/or my employees take no responsibility for the veracity, validity and correctness of the expert recommendations or other information or research. Although I do attempt to research thoroughly on information provided herein, there are no guarantees in consistency. The information presented on the site has been gathered from various sources believed to be providing correct information. I, group, companies, associates and/or employees are not responsible for errors, or inaccuracies, if any, in the content provided on the site.</li>
+          <li>I have the license to provide research recommendations as a research analyst. Your use of this and all information contained on this website is governed by these Terms and Conditions of Use. This material is based upon information that Karan Vijayvargiya consider reliable, but I do not represent that it is consistent or complete and that it should be relied upon, as such. You should not rely solely on the Information in making any investment. Rather, you should use the Information only as a starting point for doing additional independent research in order to allow you to form your own opinion regarding investments. By using , including any software and content contained therein, you agree that use of the Service is entirely at your own risk. You understand and acknowledge that there is a very high degree of risk involved in trading securities. I make no warranties and gives no assurances regarding the truth, timeliness, reliability, or good faith of any material posted on www.karanvijayvargiya.com Karan Vijayvargiya does not warranty that trading methods or systems presented in their services or the information herein or obtained from advertisers or members will result in profits or losses.</li>
+          <li>By visiting the website www.karanvijayvargiya.com, as a visitor and / or as a subscriber, surfing and reading of the information on the website is the acceptance of this disclaimer and all other terms and conditions.</li>
+          <li>Everything posted on social media (Twitter/Facebook/Telegram/YouTube channel) is for education / illustration purposes and should not be counted as recommendations or investment advice. The Stocks posted on social media are for illustration purpose only and are not recommendatory.</li>
+          <li>I do hereby expressly disclaims any implied warranties imputed by the laws of any jurisdiction. I consider ourselves and intend to be subject to the jurisdiction only of the courts of Haryana in India. If you don’t agree with any of our disclaimers above, please do not read the material on any of our pages. Although access to users outside India is not denied, Karan Vijayvargiya shall have no legal liabilities whatsoever in any laws of any jurisdiction other than India. I also reserve the right to make changes to our site and these disclaimers, terms, and conditions at any time.</li>
+        </ul>
       </div>
     </ComplianceLayout>
   );

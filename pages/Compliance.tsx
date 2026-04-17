@@ -52,7 +52,7 @@ const Compliance: React.FC = () => {
         <div className="mt-12">
           <h2 className="text-xl font-bold text-slate-800 mb-4">Grievance Redressal</h2>
           <p className="text-slate-600 text-sm mb-4">
-            If you have any complaints or grievances, please reach out to our compliance officer at <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600 underline">ra@karanvijayvargiya.com</a>. We are committed to resolving issues within statutory timelines.
+            If you have any complaints or grievances, please reach out to our compliance officer at <a href="mailto:karanvijayvargiya29@gmail.com" className="text-brand-600 underline">karanvijayvargiya29@gmail.com</a>. We are committed to resolving issues within statutory timelines.
           </p>
           <p className="text-slate-600 text-sm">
              You can also lodge your complaints on the SEBI SCORES portal if unsatisfied with our resolution.

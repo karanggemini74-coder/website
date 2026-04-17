@@ -117,7 +117,7 @@ const StandardDisclosures: React.FC = () => {
             <p><strong>SEBI RA No.:</strong> INH000025470</p>
             <p><strong>Registered Office:</strong> Office 101, 654 Shyam Aashrey, Scheme No 114, Part 2, Vijaynagar, Indore, Madhya Pradesh - 452010</p>
             <p><strong>Compliance / Grievance Officer:</strong> Karan Vijayvargiya</p>
-            <p><strong>Email:</strong> <a href="mailto:ra@karanvijayvargiya.com" className="text-brand-600 hover:underline">ra@karanvijayvargiya.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:karanvijayvargiya29@gmail.com" className="text-brand-600 hover:underline">karanvijayvargiya29@gmail.com</a></p>
             <p><strong>Phone:</strong> +91 89592 22227</p>
           </div>
         </section>

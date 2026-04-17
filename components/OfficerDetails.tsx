@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OfficerDetails: React.FC = () => {
-  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'ra@karanvijayvargiya.com';
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'karanvijayvargiya29@gmail.com';
   const contactPhone = import.meta.env.VITE_CONTACT_PHONE || '+91 89592 22227';
 
   return (
