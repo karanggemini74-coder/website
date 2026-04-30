@@ -26,7 +26,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Ensure uploads directory exists globally
-const uploadsDir = path.join(__dirname, 'uploads');
+const uploadsDir = path.join(process.cwd(), 'uploads');
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
@@ -699,7 +699,7 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     // Production serving
-    const distPath = path.join(__dirname, 'dist');
+    const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
     app.get('*all', (req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));
