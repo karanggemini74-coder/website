@@ -4,20 +4,18 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import RegulatoryBanner from './components/RegulatoryBanner';
 import ScrollToTop from './components/ScrollToTop';
+import BlogModal from './components/BlogModal';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
-const Mission = lazy(() => import('./pages/Mission'));
-const Founder = lazy(() => import('./pages/Founder'));
-const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
+const Onboarding = lazy(() => import('./pages/Onboarding'));
+const Admin = lazy(() => import('./pages/Admin'));
 const Compliance = lazy(() => import('./pages/Compliance'));
 
 // Lazy load Compliance Pages
 const Disclaimer = lazy(() => import('./pages/compliance/Disclaimer'));
 const PrivacyPolicy = lazy(() => import('./pages/compliance/PrivacyPolicy'));
 const TermsConditions = lazy(() => import('./pages/compliance/TermsConditions'));
-const AuditStatus = lazy(() => import('./pages/compliance/AuditStatus'));
 const NodalOfficer = lazy(() => import('./pages/compliance/NodalOfficer'));
 const GrievanceRedressal = lazy(() => import('./pages/compliance/GrievanceRedressal'));
 const ComplaintsStatus = lazy(() => import('./pages/compliance/ComplaintsStatus'));
@@ -41,17 +39,14 @@ const App: React.FC = () => {
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/mission" element={<Mission />} />
-              <Route path="/founder" element={<Founder />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/onboarding" element={<Onboarding />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="/compliance" element={<Compliance />} />
               
               {/* Compliance Routes */}
               <Route path="/compliance/disclaimer" element={<Disclaimer />} />
               <Route path="/compliance/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/compliance/terms-conditions" element={<TermsConditions />} />
-              <Route path="/compliance/audit-status" element={<AuditStatus />} />
               <Route path="/compliance/nodal-officer" element={<NodalOfficer />} />
               <Route path="/compliance/grievance-redressal" element={<GrievanceRedressal />} />
               <Route path="/compliance/complaints-status" element={<ComplaintsStatus />} />
@@ -61,6 +56,7 @@ const App: React.FC = () => {
           </Suspense>
         </main>
         <Footer />
+        <BlogModal />
       </div>
     </Router>
   );

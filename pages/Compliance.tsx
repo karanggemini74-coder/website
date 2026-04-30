@@ -12,8 +12,7 @@ const Compliance: React.FC = () => {
     { title: "Privacy Policy", date: "Jan 2024", path: "/compliance/privacy-policy" },
     { title: "Disclaimer", date: "Jan 2024", path: "/compliance/disclaimer" },
     { title: "Mandatory Disclosures", date: "Jan 2024", path: "/compliance/standard-disclosures" },
-    { title: "Nodal Officer", date: "Jan 2024", path: "/compliance/nodal-officer" },
-    { title: "Audit Report", date: "Jan 2024", path: "/compliance/audit-status" }
+    { title: "Nodal Officer", date: "Jan 2024", path: "/compliance/nodal-officer" }
   ];
 
   return (

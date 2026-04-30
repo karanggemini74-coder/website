@@ -1,41 +1,27 @@
 import React from 'react';
 import { Award, Book, TrendingUp, Shield, Target, Eye, Heart, CheckCircle, ArrowRight, Quote } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
 
-const Founder: React.FC = () => {
+const FounderSection: React.FC = () => {
   return (
-    <div className="bg-slate-50 min-h-screen font-sans">
-      <SEO 
-        title="About the Founder - Karan Vijayvargiya" 
-        description="Meet Karan Vijayvargiya, a SEBI Registered Research Analyst with over 8 years of experience and an MBA, dedicated to unbiased investment advice."
-        keywords="Karan Vijayvargiya, SEBI registered research analyst, founder profile, investment expert, stock market analyst India"
-      />
+    <div id="founder" className="font-sans">
       
-      {/* Modern Hero Section */}
-      <div className="relative bg-slate-900 text-white pt-24 pb-48 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
-
-        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-400/30 bg-brand-500/10 text-brand-300 text-xs font-bold uppercase tracking-widest mb-8">
+      {/* Main Profile Section */}
+      <div className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-20">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-200 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-widest mb-6">
             <Award size={14} /> 
             <span>SEBI Registered Authority</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
-            Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-blue-200 to-white">Founder</span>
-          </h1>
-          <p className="text-lg md:text-2xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight text-slate-900">
+            Meet the <span className="text-brand-600">Founder</span>
+          </h2>
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
             Your partner in wealth creation. Combining market experience with academic rigor to deliver unbiased investment research.
           </p>
         </div>
-      </div>
 
-      {/* Main Profile Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 -mt-32 relative z-20 pb-20">
-        <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-slate-100 flex flex-col lg:flex-row">
+        <div className="bg-slate-50 rounded-[2rem] overflow-hidden border border-slate-200 flex flex-col lg:flex-row">
             
             {/* Left: Image & Stats */}
             <div className="lg:w-2/5 relative min-h-[500px] lg:min-h-full">
@@ -213,12 +199,12 @@ const Founder: React.FC = () => {
              Don't navigate the market alone. Get professional, research-backed guidance.
            </p>
            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-white text-brand-600 font-bold rounded-xl hover:bg-slate-100 transition-all shadow-xl flex items-center justify-center gap-2">
+              <a href="#contact" className="px-8 py-4 bg-white text-brand-600 font-bold rounded-xl hover:bg-slate-100 transition-all shadow-xl flex items-center justify-center gap-2">
                  Schedule Consultation <ArrowRight size={20} />
-              </Link>
-              <Link to="/services" className="px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center">
+              </a>
+              <a href="#services" className="px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center">
                  Explore Services
-              </Link>
+              </a>
            </div>
         </div>
       </div>
@@ -227,4 +213,4 @@ const Founder: React.FC = () => {
   );
 };
 
-export default Founder;
+export default FounderSection;

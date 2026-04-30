@@ -10,9 +10,9 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: 'Home', path: '/' },
-    { label: 'Mission', path: '/mission' },
-    { label: 'Founder', path: '/founder' },
-    { label: 'Services', path: '/services' },
+    { label: 'Mission', path: '/#mission' },
+    { label: 'Founder', path: '/#founder' },
+    { label: 'Services', path: '/#services' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -25,8 +25,7 @@ const Navbar: React.FC = () => {
     { label: 'Privacy Policy', path: '/compliance/privacy-policy' },
     { label: 'Disclaimer', path: '/compliance/disclaimer' },
     { label: 'Mandatory Disclosures', path: '/compliance/standard-disclosures' },
-    { label: 'Nodal Officer', path: '/compliance/nodal-officer' },
-    { label: 'Audit Report', path: '/compliance/audit-status' },
+    { label: 'Nodal Officer', path: '/compliance/nodal-officer' }
   ];
 
   return (
@@ -45,16 +44,23 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(link.path) ? 'text-brand-600' : 'text-slate-600 hover:text-brand-600'
                 }`}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
+
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-blog-modal'))}
+              className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors duration-200"
+            >
+              Blogs
+            </button>
 
             {/* Compliance Dropdown */}
             <div className="relative group">
@@ -78,12 +84,12 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link
-              to="/contact"
+            <a
+              href="/#contact"
               className="px-5 py-2.5 rounded-full bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition-colors shadow-sm"
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -103,9 +109,9 @@ const Navbar: React.FC = () => {
         <div className="md:hidden bg-white border-t border-slate-100 max-h-[80vh] overflow-y-auto">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive(link.path)
@@ -114,8 +120,18 @@ const Navbar: React.FC = () => {
                 }`}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
+            
+            <button
+               onClick={() => {
+                 setIsOpen(false);
+                 window.dispatchEvent(new Event('open-blog-modal'));
+               }}
+               className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600"
+            >
+              Blogs
+            </button>
             
             <div className="px-3 py-2">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Compliance</p>
@@ -133,13 +149,13 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link
-              to="/contact"
+            <a
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center mt-4 px-5 py-3 rounded-md bg-brand-600 text-white font-semibold"
             >
               Contact Us
-            </Link>
+            </a>
           </div>
         </div>
       )}

@@ -1,8 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ComplianceLayout from '../../components/ComplianceLayout';
 
 const ComplaintsStatus: React.FC = () => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+     fetch('/api/settings/complaints', { cache: 'no-store' })
+        .then(res => res.json())
+        .then(resData => {
+            if (resData) {
+                let parsedData = resData;
+                if (typeof resData === 'string') {
+                    try { parsedData = JSON.parse(resData); } catch(e) {}
+                }
+                setData(parsedData);
+            }
+            setLoading(false);
+        })
+        .catch(err => {
+            console.error("Failed to load complaints data", err);
+            setLoading(false);
+        });
+  }, []);
+
+  if (loading) {
+     return (
+       <ComplianceLayout title="Complaints Status">
+         <div className="p-8 text-center text-slate-500">Loading currently available data...</div>
+       </ComplianceLayout>
+     );
+  }
+
+  // Provide initial fallbacks if table data hasn't been saved yet.
+  const monthEnding = data?.monthEnding || 'MARCH - 2026';
+  const monthlyData = data?.monthlyData || [
+        { source: 'Directly from investor', pendingLastMonth: 'Nil', received: 'Nil', resolved: 'N.A', totalPending: 'Nil', pendingGt3Months: 'Nil', avgResolutionTime: 'N.A' },
+        { source: 'SEBI (SCORES)', pendingLastMonth: 'Nil', received: 'Nil', resolved: 'N.A', totalPending: 'Nil', pendingGt3Months: 'Nil', avgResolutionTime: 'N.A' },
+        { source: 'Other Sources (if any)', pendingLastMonth: 'Nil', received: 'Nil', resolved: 'N.A', totalPending: 'Nil', pendingGt3Months: 'Nil', avgResolutionTime: 'N.A' },
+        { source: 'Grand Total', pendingLastMonth: 'Nil', received: 'Nil', resolved: 'N.A', totalPending: 'Nil', pendingGt3Months: 'Nil', avgResolutionTime: 'N.A' }
+  ];
+  const monthlyTrend = data?.monthlyTrend || [
+        { sr: 1, month: 'MARCH - 2026', carriedForward: 'NIL', received: 'NIL', resolved: 'N.A', pending: 'N.A' },
+        { sr: 2, month: 'FEB - 2026', carriedForward: 'NIL', received: 'NIL', resolved: 'N.A', pending: 'N.A' },
+        { sr: 3, month: 'JAN - 2026', carriedForward: 'NIL', received: 'NIL', resolved: 'N.A', pending: 'N.A' },
+        { sr: 4, month: 'Grand Total', carriedForward: 'NIL', received: 'NIL', resolved: 'N.A', pending: 'N.A' }
+  ];
+  const annualDisposal = data?.annualDisposal || [
+        { sr: 1, year: '2025-26', carriedForward: 'NIL', received: 'NIL', resolved: 'N.A', pending: 'N.A' },
+        { sr: 2, year: '2026-27', carriedForward: 'NIL', received: 'NIL', resolved: 'N.A', pending: 'N.A' },
+        { sr: 3, year: 'Grand Total', carriedForward: 'NIL', received: 'NIL', resolved: 'N.A', pending: 'N.A' }
+  ];
+
   return (
     <ComplianceLayout title="Complaints Status">
       <div className="space-y-12 text-slate-800">
@@ -10,7 +60,7 @@ const ComplaintsStatus: React.FC = () => {
         {/* Table 1: Monthly Data */}
         <section>
           <h2 className="text-xl font-bold mb-2 text-slate-900">Number Of Client's Complaints</h2>
-          <p className="text-sm text-slate-500 mb-6 uppercase font-medium tracking-wide">(DATA OF THE MONTH ENDING MARCH - 2026)</p>
+          <p className="text-sm text-slate-500 mb-6 uppercase font-medium tracking-wide">(DATA OF THE MONTH ENDING {monthEnding})</p>
           
           <div className="overflow-x-auto border border-slate-200 rounded-lg shadow-sm">
             <table className="min-w-full text-xs md:text-sm text-center">
@@ -26,42 +76,20 @@ const ComplaintsStatus: React.FC = () => {
                  </tr>
                </thead>
                <tbody className="divide-y divide-slate-200 bg-white">
-                 <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-left font-medium text-slate-700">Directly from investor</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                 <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-left font-medium text-slate-700">SEBI (SCORES)</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                 <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-left font-medium text-slate-700">Other Sources (if any)</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">Nil</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                 <tr className="font-bold bg-slate-50 text-slate-900 border-t-2 border-slate-100">
-                   <td className="p-4 border-r border-slate-200 text-left">Grand Total</td>
-                   <td className="p-4 border-r border-slate-200">Nil</td>
-                   <td className="p-4 border-r border-slate-200">Nil</td>
-                   <td className="p-4 border-r border-slate-200">N.A</td>
-                   <td className="p-4 border-r border-slate-200">Nil</td>
-                   <td className="p-4 border-r border-slate-200">Nil</td>
-                   <td className="p-4">N.A</td>
-                 </tr>
+                 {monthlyData.map((row: any, idx: number) => {
+                     const isLast = idx === monthlyData.length - 1;
+                     return (
+                         <tr key={idx} className={`${isLast ? 'font-bold bg-slate-50 text-slate-900 border-t-2 border-slate-100' : 'hover:bg-slate-50 transition-colors'}`}>
+                           <td className={`p-4 border-r border-slate-200 text-left ${!isLast && 'font-medium text-slate-700'}`}>{row.source}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.pendingLastMonth}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.received}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.resolved}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.totalPending}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.pendingGt3Months}</td>
+                           <td className={`p-4 ${!isLast && 'text-slate-600'}`}>{row.avgResolutionTime}</td>
+                         </tr>
+                     );
+                 })}
                </tbody>
             </table>
           </div>
@@ -86,38 +114,19 @@ const ComplaintsStatus: React.FC = () => {
                  </tr>
                </thead>
                <tbody className="divide-y divide-slate-200 bg-white">
-                 <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-slate-600">1</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">MARCH - 2026</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                 <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-slate-600">2</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">FEB - 2026</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                 <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-slate-600">3</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">JAN - 2026</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                 <tr className="font-bold bg-slate-50 text-slate-900 border-t-2 border-slate-100">
-                   <td className="p-4 border-r border-slate-200">4</td>
-                   <td className="p-4 border-r border-slate-200">Grand Total</td>
-                   <td className="p-4 border-r border-slate-200">NIL</td>
-                   <td className="p-4 border-r border-slate-200">NIL</td>
-                   <td className="p-4 border-r border-slate-200">N.A</td>
-                   <td className="p-4">N.A</td>
-                 </tr>
+                 {monthlyTrend.map((row: any, idx: number) => {
+                     const isLast = idx === monthlyTrend.length - 1;
+                     return (
+                         <tr key={idx} className={`${isLast ? 'font-bold bg-slate-50 text-slate-900 border-t-2 border-slate-100' : 'hover:bg-slate-50 transition-colors'}`}>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.sr}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.month}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.carriedForward}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.received}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.resolved}</td>
+                           <td className={`p-4 ${!isLast && 'text-slate-600'}`}>{row.pending}</td>
+                         </tr>
+                     );
+                 })}
                </tbody>
             </table>
           </div>
@@ -146,30 +155,19 @@ const ComplaintsStatus: React.FC = () => {
                  </tr>
                </thead>
                <tbody className="divide-y divide-slate-200 bg-white">
-                 <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-slate-600">1</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">2025-26</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                  <tr className="hover:bg-slate-50 transition-colors">
-                   <td className="p-4 border-r border-slate-200 text-slate-600">2</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">2026-27</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">NIL</td>
-                   <td className="p-4 border-r border-slate-200 text-slate-600">N.A</td>
-                   <td className="p-4 text-slate-600">N.A</td>
-                 </tr>
-                 <tr className="font-bold bg-slate-50 text-slate-900 border-t-2 border-slate-100">
-                   <td className="p-4 border-r border-slate-200">3</td>
-                   <td className="p-4 border-r border-slate-200">Grand Total</td>
-                   <td className="p-4 border-r border-slate-200">NIL</td>
-                   <td className="p-4 border-r border-slate-200">NIL</td>
-                   <td className="p-4 border-r border-slate-200">N.A</td>
-                   <td className="p-4">N.A</td>
-                 </tr>
+                 {annualDisposal.map((row: any, idx: number) => {
+                     const isLast = idx === annualDisposal.length - 1;
+                     return (
+                         <tr key={idx} className={`${isLast ? 'font-bold bg-slate-50 text-slate-900 border-t-2 border-slate-100' : 'hover:bg-slate-50 transition-colors'}`}>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.sr}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.year}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.carriedForward}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.received}</td>
+                           <td className={`p-4 border-r border-slate-200 ${!isLast && 'text-slate-600'}`}>{row.resolved}</td>
+                           <td className={`p-4 ${!isLast && 'text-slate-600'}`}>{row.pending}</td>
+                         </tr>
+                     );
+                 })}
                </tbody>
             </table>
           </div>

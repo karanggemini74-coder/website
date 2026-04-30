@@ -12,7 +12,7 @@ const ParticleBackground: React.FC = () => {
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    let mouse = { x: -1000, y: -1000 };
+    const mouse = { x: -1000, y: -1000 };
 
     // Google Brand Colors
     const COLORS = {

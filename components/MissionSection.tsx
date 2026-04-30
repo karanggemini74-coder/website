@@ -1,37 +1,28 @@
 import React from 'react';
 import { CheckCircle, Eye, Shield, Target, TrendingUp, Users, BookOpen } from 'lucide-react';
-import SEO from '../components/SEO';
 
-const Mission: React.FC = () => {
+const MissionSection: React.FC = () => {
   return (
-    <div className="bg-slate-50 min-h-screen">
-      <SEO 
-        title="Our Mission" 
-        description="Our mission is to empower investors through transparency, education, and research-driven insights for long-term wealth creation."
-        keywords="investment mission, financial literacy, investor education, unbiased research, SEBI registered analyst mission"
-      />
-      {/* Hero Section with Modern Gradient */}
-      <div className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden">
-        {/* Abstract Background Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent-600/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-        
+    <div id="mission" className="bg-slate-50">
+
+      {/* Header Section */}
+      <div className="relative bg-slate-50 text-slate-900 py-24 overflow-hidden border-t border-slate-200">
         <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block px-4 py-1.5 rounded-full border border-brand-400/30 bg-brand-400/10 text-brand-300 text-sm font-semibold mb-6 tracking-wide uppercase">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-brand-200 bg-brand-50 text-brand-600 text-sm font-semibold mb-6 tracking-wide uppercase">
             Driving Financial Excellence
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">Mission</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
+            Our <span className="text-brand-600">Mission</span>
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
             Empowering investors through transparency, education, and research-driven insights
           </p>
         </div>
       </div>
 
-      {/* Floating Stats Section */}
-      <div className="relative z-20 max-w-5xl mx-auto px-4 -mt-16">
-        <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+      {/* Mission Content Stats */}
+      <div className="relative z-20 max-w-5xl mx-auto px-4 pb-12">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
           <div className="text-center pt-4 md:pt-0">
             <span className="block text-4xl font-extrabold text-brand-600 mb-2">Data</span>
             <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">Driven Approach</span>
@@ -184,4 +175,4 @@ const Mission: React.FC = () => {
   );
 };
 
-export default Mission;
+export default MissionSection;

@@ -1,22 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Shield, Facebook, Instagram, Youtube, Gavel, ExternalLink, Twitter, Linkedin, AtSign, MessageCircle } from 'lucide-react';
-import ContactForm from '../components/ContactForm';
-import SEO from '../components/SEO';
+import ContactForm from './ContactForm';
+import { Link } from 'react-router-dom';
 
-const Contact: React.FC = () => {
+const ContactSection: React.FC = () => {
   const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'karanvijayvargiya29@gmail.com';
   const contactPhone = import.meta.env.VITE_CONTACT_PHONE || '+91 89592 22227';
   const sebiRegNo = import.meta.env.VITE_SEBI_REG_NO || 'INH000025470';
   const officeAddress = import.meta.env.VITE_OFFICE_ADDRESS || 'Office 101, 654 Shyam Aashrey, Scheme No 114, Part 2, Vijaynagar, Indore, Madhya Pradesh - 452010';
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-12 pb-24">
-      <SEO 
-        title="Contact Us" 
-        description="Get in touch with Karan Vijayvargiya for expert investment guidance. Reach out via email, phone, or visit our office in Indore."
-        keywords="contact research analyst, investment consultation, stock market advisory contact, Indore stock analyst"
-      />
+    <div id="contact" className="bg-slate-50 py-24">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
@@ -132,11 +126,11 @@ const Contact: React.FC = () => {
         <div className="mt-20">
           <h2 className="text-2xl font-bold text-center mb-8">Quick Links</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-             <Link to="/services" className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:shadow-md transition-shadow block">
+             <a href="#services" className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:shadow-md transition-shadow block">
                <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600"><MapPin size={20}/></div>
                <h4 className="font-bold text-slate-800">Services</h4>
                <p className="text-xs text-slate-500">View advisory plans</p>
-             </Link>
+             </a>
              <Link to="/compliance" className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:shadow-md transition-shadow block">
                <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3 text-green-600"><Shield size={20}/></div>
                <h4 className="font-bold text-slate-800">Compliance</h4>
@@ -147,11 +141,11 @@ const Contact: React.FC = () => {
                <h4 className="font-bold text-slate-800">Grievance</h4>
                <p className="text-xs text-slate-500">File a complaint</p>
              </Link>
-             <Link to="/founder" className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:shadow-md transition-shadow block">
+             <a href="#founder" className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:shadow-md transition-shadow block">
                <div className="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3 text-purple-600"><MapPin size={20}/></div>
                <h4 className="font-bold text-slate-800">About Founder</h4>
                <p className="text-xs text-slate-500">Meet Karan</p>
-             </Link>
+             </a>
           </div>
         </div>
 
@@ -160,4 +154,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;
