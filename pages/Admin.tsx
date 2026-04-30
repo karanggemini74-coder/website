@@ -610,8 +610,24 @@ export default function Admin() {
                          </div>
                         <div className="flex gap-2">
                            <button onClick={() => {
-                             let parseF = [''];
-                             try { parseF = JSON.parse(svc.features) || ['']; } catch(e){}
+                             let parseF: string[] = [''];
+                             try {
+                               const features = svc.features;
+                               if (Array.isArray(features)) {
+                                 parseF = features;
+                               } else if (typeof features === 'string') {
+                                 try {
+                                   const parsed = JSON.parse(features);
+                                   if (Array.isArray(parsed)) {
+                                     parseF = parsed;
+                                   } else if (typeof parsed === 'string') {
+                                     parseF = [parsed];
+                                   }
+                                 } catch (e) {
+                                   parseF = [features];
+                                 }
+                               }
+                             } catch(e){}
                              setServiceForm({
                                title: svc.title || '', subtitle: svc.subtitle || '', is_popular: !!svc.is_popular, theme_color: svc.theme_color || 'blue',
                                features: parseF, price_monthly: svc.price_monthly || '', price_quarterly: svc.price_quarterly || '',

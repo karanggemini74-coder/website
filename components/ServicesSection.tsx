@@ -94,11 +94,20 @@ const ServicesSection: React.FC = () => {
                         const theme = themeMap[plan.theme_color] || themeMap.blue;
                         let features: string[] = [];
                         try {
-                            const parsed = JSON.parse(plan.features);
-                            if (Array.isArray(parsed)) {
-                                features = parsed;
-                            } else if (typeof parsed === 'string') {
-                                features = [parsed];
+                            const rawF = plan.features;
+                            if (Array.isArray(rawF)) {
+                                features = rawF;
+                            } else if (typeof rawF === 'string') {
+                                try {
+                                    const parsed = JSON.parse(rawF);
+                                    if (Array.isArray(parsed)) {
+                                        features = parsed;
+                                    } else if (typeof parsed === 'string') {
+                                        features = [parsed];
+                                    }
+                                } catch (e) {
+                                    features = [rawF];
+                                }
                             }
                         } catch(e) {}
 
