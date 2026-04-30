@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import RegulatoryBanner from './components/RegulatoryBanner';
 import ScrollToTop from './components/ScrollToTop';
 import BlogModal from './components/BlogModal';
+import AccessibilityWidget from './components/AccessibilityWidget';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -32,6 +33,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
+      <AccessibilityWidget />
       <div className="flex flex-col min-h-screen">
         <RegulatoryBanner />
         <Navbar />
