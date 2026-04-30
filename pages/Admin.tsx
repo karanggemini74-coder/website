@@ -111,7 +111,7 @@ export default function Admin() {
     const formData = new FormData();
     formData.append('image', file);
     try {
-      const res = await fetch('/api/admin/upload-image', { method: 'POST', body: formData });
+      const res = await fetch('/api/admin/upload-image', { method: 'POST', headers: getAuthHeaders(), body: formData });
       const data = await res.json();
       if (data.url && editorRef.current) {
         const textarea = editorRef.current;
@@ -147,6 +147,7 @@ export default function Admin() {
 
       const res = await fetch('/api/admin/blogs', {
         method: 'POST',
+        headers: getAuthHeaders(),
         body: formData
       });
 
@@ -444,7 +445,7 @@ export default function Admin() {
                     {services.length === 0 && (
                         <button onClick={async () => {
                             if (confirm('Restore the default 2 plans?')) {
-                                await fetch('/api/admin/plans/restore-defaults', { method: 'POST' });
+                                await fetch('/api/admin/plans/restore-defaults', { method: 'POST', headers: getAuthHeaders() });
                                 fetchServices();
                             }
                         }} className="border border-brand-200 text-brand-700 bg-brand-50 px-6 py-2 rounded-xl font-bold flex items-center gap-2 hover:bg-brand-100 transition">
@@ -479,7 +480,7 @@ export default function Admin() {
                     const url = editingServiceId ? `/api/admin/plans/${editingServiceId}` : '/api/admin/plans';
                     const res = await fetch(url, {
                       method,
-                      headers: {'Content-Type': 'application/json'},
+                      headers: {'Content-Type': 'application/json', ...getAuthHeaders()},
                       body: JSON.stringify(serviceForm)
                     });
                     if (!res.ok) throw new Error('Failed to save service');
@@ -596,7 +597,7 @@ export default function Admin() {
                                     const newStatus = svc.status === 'active' ? 'inactive' : 'active';
                                     await fetch(`/api/admin/plans/${svc.id}`, { 
                                         method: 'PUT',
-                                        headers: { 'Content-Type': 'application/json' },
+                                        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
                                         body: JSON.stringify({...svc, status: newStatus})
                                     });
                                     fetchServices();
@@ -622,7 +623,7 @@ export default function Admin() {
                            <button onClick={async () => {
                              if (confirm('Are you sure you want to delete this plan?')) {
                                try {
-                                 await fetch(`/api/admin/plans/${svc.id}`, { method: 'DELETE' });
+                                 await fetch(`/api/admin/plans/${svc.id}`, { method: 'DELETE', headers: getAuthHeaders() });
                                  fetchServices();
                                } catch (e) {
                                  alert('Delete failed');
