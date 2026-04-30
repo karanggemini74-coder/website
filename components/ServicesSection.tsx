@@ -92,9 +92,14 @@ const ServicesSection: React.FC = () => {
                 <div className="flex flex-wrap justify-center items-stretch gap-8 lg:gap-12 w-full max-w-7xl mx-auto">
                     {plans.map((plan, index) => {
                         const theme = themeMap[plan.theme_color] || themeMap.blue;
-                        let features = [];
+                        let features: string[] = [];
                         try {
-                            features = JSON.parse(plan.features) || [];
+                            const parsed = JSON.parse(plan.features);
+                            if (Array.isArray(parsed)) {
+                                features = parsed;
+                            } else if (typeof parsed === 'string') {
+                                features = [parsed];
+                            }
                         } catch(e) {}
 
                         return (
