@@ -33,7 +33,7 @@ const Onboarding: React.FC = () => {
     consentGiven: false,
     
     // Step 5: Payment
-    paymentMethod: ''
+    paymentMethod: 'Razorpay'
   });
 
   const [dateError, setDateError] = useState('');
@@ -759,24 +759,11 @@ const Onboarding: React.FC = () => {
                      </div>
                   </div>
 
-                     <div className="space-y-3">
-                     <label className="flex items-center justify-between p-4 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors">
+                    <div className="space-y-3">
+                     <label className="flex items-center justify-between p-4 border border-brand-200 bg-brand-50 rounded-lg cursor-pointer transition-colors">
                         <div className="flex items-center gap-3">
-                            <input type="radio" name="paymentMethod" value="Razorpay" checked={formData.paymentMethod === 'Razorpay'} onChange={handleInputChange} className="w-5 h-5 text-brand-600 border-gray-300 focus:ring-brand-500" />
+                            <input type="radio" name="paymentMethod" value="Razorpay" checked={formData.paymentMethod === 'Razorpay'} readOnly className="w-5 h-5 text-brand-600 border-gray-300 focus:ring-brand-500" />
                             <span className="font-semibold text-slate-700">Razorpay (Cards, UPI, NetBanking)</span>
-                        </div>
-                     </label>
-                     <label className="flex items-center justify-between p-4 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-3">
-                            <input type="radio" name="paymentMethod" value="UPI" checked={formData.paymentMethod === 'UPI'} onChange={handleInputChange} className="w-5 h-5 text-brand-600 border-gray-300 focus:ring-brand-500" />
-                            <span className="font-semibold text-slate-700">UPI / QR Code</span>
-                        </div>
-                     </label>
-
-                     <label className="flex items-center justify-between p-4 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-3">
-                            <input type="radio" name="paymentMethod" value="NetBanking" checked={formData.paymentMethod === 'NetBanking'} onChange={handleInputChange} className="w-5 h-5 text-brand-600 border-gray-300 focus:ring-brand-500" />
-                            <span className="font-semibold text-slate-700">Online Bank Transfer / NEFT / IMPS</span>
                         </div>
                      </label>
                   </div>
