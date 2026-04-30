@@ -250,7 +250,7 @@ async function startServer() {
   app.use('/api/admin', requireAdmin);
 
   // Serve uploads publicly so admin can view them securely
-  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+  app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
   app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Backend is running' });
@@ -272,13 +272,13 @@ async function startServer() {
       const aadhaarBackPath = files['aadhaarBack'] ? files['aadhaarBack'][0].filename : '';
 
       // 1. Generate Invoice PDF
-      const invoiceFilename = `Invoice_${formData.fullName.replace(/\\s+/g, '_')}_${Date.now()}.pdf`;
-      const invoicePath = path.join(__dirname, 'uploads', invoiceFilename);
+      const invoiceFilename = `Invoice_${formData.fullName.replace(/\s+/g, '_')}_${Date.now()}.pdf`;
+      const invoicePath = path.join(process.cwd(), 'uploads', invoiceFilename);
       await createInvoicePDF(formData, invoicePath);
 
       // 2. Generate Agreement / MITC PDF
-      const agreementFilename = `Agreement_${formData.fullName.replace(/\\s+/g, '_')}_${Date.now()}.pdf`;
-      const agreementPath = path.join(__dirname, 'uploads', agreementFilename);
+      const agreementFilename = `Agreement_${formData.fullName.replace(/\s+/g, '_')}_${Date.now()}.pdf`;
+      const agreementPath = path.join(process.cwd(), 'uploads', agreementFilename);
       await createAgreementPDF(formData, agreementPath);
 
       console.log('PDFs Generated successfully');
