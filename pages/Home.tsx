@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { BarChart2, Shield, TrendingUp, BookOpen, CheckCircle, ArrowRight, Search, Handshake, Sprout, Scale, LineChart, PieChart } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'motion/react';
 import SEO from '../components/SEO';
 import MissionSection from '../components/MissionSection';
 import FounderSection from '../components/FounderSection';
