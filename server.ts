@@ -221,19 +221,21 @@ async function startServer() {
   app.use(express.json());
   
   // Admin Authentication Setup
-  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
+  const getAdminPassword = () => process.env.ADMIN_PASSWORD || 'admin123';
 
   app.post('/api/login', (req, res) => {
-    if (req.body.password === ADMIN_PASSWORD) {
-      res.json({ success: true, token: ADMIN_PASSWORD });
+    const currentPassword = getAdminPassword();
+    if (req.body.password === currentPassword) {
+      res.json({ success: true, token: currentPassword });
     } else {
       res.status(401).json({ success: false, error: 'Invalid password' });
     }
   });
 
   const requireAdmin = (req: express.Request, res: express.Response, next: express.NextFunction) => {
+    const currentPassword = getAdminPassword();
     const authHeader = req.headers.authorization;
-    if (authHeader && authHeader === `Bearer ${ADMIN_PASSWORD}`) {
+    if (authHeader && authHeader === `Bearer ${currentPassword}`) {
       next();
     } else {
       res.status(401).json({ error: 'Unauthorized: Invalid or missing token' });
